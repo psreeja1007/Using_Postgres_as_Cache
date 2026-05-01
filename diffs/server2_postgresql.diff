@@ -1,0 +1,47 @@
+--- configs/postgresql.conf	2026-05-01 20:15:07.296811372 +0530
++++ configs/server2/postgresql.conf	2026-05-01 20:06:45.417113475 +0530
+@@ -61,7 +61,7 @@
+ 					# comma-separated list of addresses;
+ 					# defaults to 'localhost'; use '*' for all
+ 					# (change requires restart)
+-#port = 5432				# (change requires restart)
++port = 5433				# (change requires restart)
+ max_connections = 100			# (change requires restart)
+ #reserved_connections = 0		# (change requires restart)
+ #superuser_reserved_connections = 3	# (change requires restart)
+@@ -478,7 +478,7 @@
+ 					# logging_collector to be on.
+ 
+ # This is used when logging to stderr:
+-#logging_collector = off		# Enable capturing of stderr, jsonlog,
++logging_collector = on		# Enable capturing of stderr, jsonlog,
+ 					# and csvlog into log files. Required
+ 					# to be on for csvlogs and jsonlogs.
+ 					# (change requires restart)
+@@ -516,7 +516,7 @@
+ 
+ # - When to Log -
+ 
+-#log_min_messages = warning		# values in order of decreasing detail:
++log_min_messages = debug1		# values in order of decreasing detail:
+ 					#   debug5
+ 					#   debug4
+ 					#   debug3
+@@ -696,7 +696,7 @@
+ 
+ # - Statement Behavior -
+ 
+-#client_min_messages = notice		# values in order of decreasing detail:
++client_min_messages = debug1		# values in order of decreasing detail:
+ 					#   debug5
+ 					#   debug4
+ 					#   debug3
+@@ -770,7 +770,7 @@
+ 
+ #local_preload_libraries = ''
+ #session_preload_libraries = ''
+-#shared_preload_libraries = ''		# (change requires restart)
++shared_preload_libraries = 'pg_cache_router'		# (change requires restart)
+ #jit_provider = 'llvmjit'		# JIT library to use
+ 
+ # - Other Defaults -

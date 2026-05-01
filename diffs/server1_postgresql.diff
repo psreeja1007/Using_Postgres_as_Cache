@@ -1,0 +1,11 @@
+--- configs/postgresql.conf	2026-05-01 20:15:07.296811372 +0530
++++ configs/server1/postgresql.conf	2026-05-01 20:06:34.452574982 +0530
+@@ -223,7 +223,7 @@
+ 
+ # - Settings -
+ 
+-#wal_level = replica			# minimal, replica, or logical
++wal_level = logical			# minimal, replica, or logical
+ 					# (change requires restart)
+ #fsync = on				# flush data to disk for crash safety
+ 					# (turning this off can cause
