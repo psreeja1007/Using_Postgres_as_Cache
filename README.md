@@ -128,20 +128,23 @@ Used for eviction policies.
 ```
 .
 ├── postgres/                # PostgreSQL 17.9 source code
+├── miscfiles.zip
+├── diffs/
+│   ├── server1_postgresql.diff
+│   ├── server2_postgresql.diff
+└── README.md
+
+misc files
 ├── pg_cache_router/         # Extension source code
 ├── configs/
 │   ├── postgresql.conf      # Default configuration
 │   ├── server1/             # Master configs
 │   └── server2/             # Cache configs
-├── diffs/
-│   ├── server1_postgresql.diff
-│   ├── server2_postgresql.diff
 ├── database setup files/    # SQL setup scripts
 │   ├── cache setup
 │   ├── main db setup
 ├── testing code/            # test scripts
 │   ├── test.py
-└── README.md
 ```
 
 ---
